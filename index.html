@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Fikri Fahrezi - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#home" class="logo">MFF</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <button class="theme-toggle" id="themeToggle">
+                            <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                            <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Command Palette -->
+    <div class="command-palette" id="commandPalette">
+        <div class="command-palette-content">
+            <input type="text" id="commandInput" placeholder="Type a command or search..." />
+            <div class="command-results" id="commandResults"></div>
+        </div>
+    </div>
+
+    <!-- Terminal Easter Egg -->
+    <div class="terminal" id="terminal">
+        <div class="terminal-header">
+            <span class="terminal-title">Terminal</span>
+            <button class="terminal-close" id="terminalClose">×</button>
+        </div>
+        <div class="terminal-body" id="terminalBody">
+            <div class="terminal-line">Welcome to MFF Terminal</div>
+            <div class="terminal-line">Type 'help' for available commands</div>
+        </div>
+        <div class="terminal-input-line">
+            <span class="terminal-prompt">$ </span>
+            <input type="text" class="terminal-input" id="terminalInput" />
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title fade-in">
+                        Hi, I'm <span class="gradient-text">Muhammad Fikri Fahrezi</span>
+                    </h1>
+                    <h2 class="hero-subtitle fade-in">Informatics Student & Developer</h2>
+                    <p class="hero-description fade-in">
+                        Building AI-powered applications, backend systems, and technology projects.
+                    </p>
+                    <div class="hero-buttons fade-in">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <button class="btn btn-secondary" id="openTerminal">$ Open Terminal</button>
+                    </div>
+                </div>
+                <div class="hero-visual fade-in">
+                    <div class="tech-circle">
+                        <div class="code-symbol">&lt;/&gt;</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats -->
+            <div class="stats fade-in">
+                <div class="stat-item">
+                    <h3 class="stat-number">4+</h3>
+                    <p class="stat-label">Projects</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number">25+</h3>
+                    <p class="stat-label">Certificates</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number">10+</h3>
+                    <p class="stat-label">Technologies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Building solutions with modern technologies</p>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="src/img/project/jadikelas.png" alt="JadiKelas.tech">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">JadiKelas.tech</h3>
+                        <p class="project-description">
+                            AI-powered education platform that transforms learning materials into interactive courses.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">PDF</span>
+                            <span class="tech-tag">DOCX</span>
+                        </div>
+                        <a href="https://jadikelas.tech" target="_blank" class="project-link">
+                            Live Demo →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="src/img/project/exodusai.jpg" alt="ExodusAI">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">ExodusAI</h3>
+                        <p class="project-description">
+                            AI-powered personal assistant and chatbot platform with multimodal AI capabilities.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">Pollinations AI</span>
+                            <span class="tech-tag">Baileys</span>
+                        </div>
+                        <a href="https://wa.me/6285150984232?text=Hai" target="_blank" class="project-link">
+                            Live Demo →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="src/img/project/temanduit.png" alt="TemanDuit AI">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">TemanDuit AI</h3>
+                        <p class="project-description">
+                            AI Personal Finance Assistant.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">Pollinations AI</span>
+                        </div>
+                        <a href="https://t.me/TemanDuit_bot" target="_blank" class="project-link">
+                            Live Demo →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="src/img/project/tibotyronaldo.jpg" alt="Tiboty Ronaldo">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Tiboty Ronaldo</h3>
+                        <p class="project-description">
+                            A Telegram bot with an AI persona designed to deliver responses that are firm, blunt, and straight to the point.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">Pollinations AI</span>
+                        </div>
+                        <a href="https://t.me/TibotyRonaldo_bot" target="_blank" class="project-link">
+                            Live Demo →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section certificates-section">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-subtitle">Professional credentials and achievements</p>
+            
+            <div class="certificates-grid" id="certificatesGrid">
+                <!-- Certificates will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <p class="section-subtitle">Tools and technologies I work with</p>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">REST API</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">AI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AI API Integration</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">LLM</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Networking</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MikroTik</span>
+                        <span class="skill-tag">TCP/IP</span>
+                        <span class="skill-tag">Routing</span>
+                        <span class="skill-tag">Network Troubleshooting</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Cybersecurity</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Networking Security</span>
+                        <span class="skill-tag">Security Fundamentals</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        I'm an Informatics student and developer interested in<br>
+                        <strong>Artificial Intelligence</strong>, <strong>backend development</strong>,<br>
+                        <strong>networking</strong>, and <strong>cybersecurity</strong>.
+                    </p>
+                    <p class="about-description">
+                        I enjoy turning ideas into real-world applications<br>
+                        and experimenting with new technologies.
+                    </p>
+                </div>
+
+                <div class="about-details">
+                    <div class="about-card">
+                        <h3 class="about-card-title">Education</h3>
+                        <p class="about-card-text">
+                            <strong>Universitas Muhammadiyah Makassar</strong><br>
+                            Informatics Engineering<br>
+                            2025 — Present
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <h3 class="about-card-title">Interests</h3>
+                        <ul class="interest-list">
+                            <li>AI Engineering</li>
+                            <li>Backend Development</li>
+                            <li>Data Science</li>
+                            <li>Cloud Computing</li>
+                            <li>Cybersecurity</li>
+                            <li>Networking</li>
+                            <li>Entrepreneurship</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Let's build something together.</h2>
+            <p class="contact-description">
+                Have a project, opportunity, or just want to talk<br>
+                about technology?
+            </p>
+            
+            <div class="contact-buttons">
+                <a href="mailto:muhammadfikrifahrezi2@gmail.com" class="btn btn-primary">Email Me</a>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/fikrifahrezi25" target="_blank" class="social-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/muhammad-fikri-fahrezi-040166333" target="_blank" class="social-link">LinkedIn</a>
+                <a href="https://instagram.com/fikrifahrezi24" target="_blank" class="social-link">Instagram</a>
+                <a href="https://wa.me/6285928087634" target="_blank" class="social-link">WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Muhammad Fikri Fahrezi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
