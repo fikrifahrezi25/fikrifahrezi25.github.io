@@ -846,6 +846,21 @@ body:not(.dark-mode) .moon-icon {
     }
 }
 
+/* Hero section elements only */
+.hero .fade-in {
+    animation: fadeIn 0.8s ease-in;
+}
+
+/* All other elements appear immediately without animation */
+.project-card,
+.certificate-card,
+.featured-certificate-card,
+.skill-category,
+.about-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .mobile-menu-btn {
