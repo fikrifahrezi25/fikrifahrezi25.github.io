@@ -227,7 +227,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadFeaturedCertificates();
     loadCertificates();
     setupEventListeners();
-    setupIntersectionObserver();
 });
 
 // Load Featured Certificates
@@ -475,27 +474,6 @@ function executeTerminalCommand(command) {
 // Mobile Menu
 function toggleMobileMenu() {
     navMenu.classList.toggle('active');
-}
-
-// Intersection Observer for animations
-function setupIntersectionObserver() {
-    const options = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-            }
-        });
-    }, options);
-    
-    // Observe all cards and sections
-    document.querySelectorAll('.project-card, .certificate-card, .skill-category, .about-card').forEach(el => {
-        observer.observe(el);
-    });
 }
 
 // Active nav link on scroll
