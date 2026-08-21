@@ -1,6 +1,13 @@
 // Certificates Data (sorted by date, newest first)
 const certificates = [
     {
+        title: "Using the Google Cloud Speech API",
+        publisher: "Google",
+        issued: "Aug 2026",
+        img: "src/img/sertifikat/sugwT79SbI2u2hS9K4Pxd_Xn7aFbHvZhTPhy4LaCMQg=.png",
+        url: "https://www.skills.google/public_profiles/fd4c131f-a544-4151-b6d9-e9507426290f/badges/27069004"
+    },
+    {
         title: "Explore Generative AI with the Vertex AI Gemini API",
         publisher: "Google",
         issued: "Aug 2026",
