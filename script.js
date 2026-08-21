@@ -1,3 +1,12 @@
+// Featured Certificates IDs
+const featuredCertificateIds = [
+    "mtcna",
+    "mtcna-training",
+    "excel",
+    "juara2-network",
+    "lks-sulsel"
+];
+
 // Certificates Data (sorted by date, newest first)
 const certificates = [
     {
@@ -113,6 +122,7 @@ const certificates = [
         url: null
     },
     {
+        id: "juara2-network",
         title: "Juara 2 Lomba Network Administration",
         publisher: "Electro Invention Race",
         issued: "Dec 2024",
@@ -120,6 +130,7 @@ const certificates = [
         url: null
     },
     {
+        id: "mtcna",
         title: "MikroTik Certified Network Associate",
         publisher: "MikroTik",
         issued: "Nov 2024",
@@ -127,6 +138,7 @@ const certificates = [
         url: "https://mikrotik.com/training/certificates/c382817c439a139272c5"
     },
     {
+        id: "mtcna-training",
         title: "MikroTik MTCNA + Exam Training",
         publisher: "ID-Networkers",
         issued: "Nov 2024",
@@ -148,6 +160,7 @@ const certificates = [
         url: "https://lms.idn.id/certificates/sertifikat-mikrotik-dasar/?course_id=182&cert-nonce=6fd99b2230"
     },
     {
+        id: "excel",
         title: "Microsoft Excel Associate",
         publisher: "Microsoft",
         issued: "Aug 2024",
@@ -162,6 +175,7 @@ const certificates = [
         url: "https://agunacourse.com/cek-sertifikat?search="
     },
     {
+        id: "lks-sulsel",
         title: "LKS Provinsi Sulawesi Selatan",
         publisher: "LKS SMK",
         issued: "May 2024",
@@ -210,38 +224,60 @@ const navMenu = document.getElementById('navMenu');
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
+    loadFeaturedCertificates();
     loadCertificates();
     setupEventListeners();
     setupIntersectionObserver();
 });
 
-// Load Certificates
+// Load Featured Certificates
+function loadFeaturedCertificates() {
+    const featuredGrid = document.getElementById('featuredCertificatesGrid');
+    
+    const featuredCerts = certificates.filter(cert => 
+        featuredCertificateIds.includes(cert.id)
+    );
+    
+    featuredCerts.forEach(cert => {
+        const card = createCertificateCard(cert, true);
+        featuredGrid.appendChild(card);
+    });
+}
+
+// Load All Certificates
 function loadCertificates() {
     const certificatesGrid = document.getElementById('certificatesGrid');
     
     certificates.forEach(cert => {
-        const card = document.createElement('div');
-        card.className = 'certificate-card';
-        
-        const hasUrl = cert.url !== null && cert.url !== '-';
-        
-        card.innerHTML = `
-            <div class="certificate-image">
-                <img src="${cert.img}" alt="${cert.title}" loading="lazy">
-            </div>
-            <div class="certificate-content">
-                <h3 class="certificate-title">${cert.title}</h3>
-                <p class="certificate-publisher">${cert.publisher}</p>
-                <p class="certificate-date">${cert.issued}</p>
-                ${hasUrl 
-                    ? `<a href="${cert.url}" target="_blank" class="certificate-link">View Certificate →</a>`
-                    : `<span class="certificate-link disabled">No Link Available</span>`
-                }
-            </div>
-        `;
-        
+        const card = createCertificateCard(cert, false);
         certificatesGrid.appendChild(card);
     });
+}
+
+// Create Certificate Card
+function createCertificateCard(cert, isFeatured = false) {
+    const card = document.createElement('div');
+    card.className = isFeatured ? 'certificate-card featured-certificate-card' : 'certificate-card';
+    
+    const hasUrl = cert.url !== null && cert.url !== '-';
+    
+    card.innerHTML = `
+        <div class="certificate-image">
+            <img src="${cert.img}" alt="${cert.title}" loading="lazy">
+            ${isFeatured ? '<div class="featured-badge">Featured</div>' : ''}
+        </div>
+        <div class="certificate-content">
+            <h3 class="certificate-title">${cert.title}</h3>
+            <p class="certificate-publisher">${cert.publisher}</p>
+            <p class="certificate-date">${cert.issued}</p>
+            ${hasUrl 
+                ? `<a href="${cert.url}" target="_blank" class="certificate-link">View Certificate →</a>`
+                : `<span class="certificate-link disabled">No Link Available</span>`
+            }
+        </div>
+    `;
+    
+    return card;
 }
 
 // Setup Event Listeners
