@@ -8,8 +8,14 @@ const featuredCertificateIds = [
 ];
 
 // Certificates Data (sorted by date, newest first)
-// GLfVO7bmeMcfYC8AI8NBW8gnMmpYHel4EFovC6enUio=.png
 const certificates = [
+    {
+        title: "Implement Speech and Language Solutions with Pre-trained APIs",
+        publisher: "Google",
+        issued: "Aug 2026",
+        img: "src/img/sertifikat/W_ApgdYs+n4QOYhy42XW40XtBAuCpET_sIo2XoBiDEo=.png",
+        url: "https://www.skills.google/public_profiles/fd4c131f-a544-4151-b6d9-e9507426290f/badges/27136963"
+    },
     {
         title: "Use Machine Learning APIs on Google Cloud",
         publisher: "Google",
