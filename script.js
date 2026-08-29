@@ -10,6 +10,20 @@ const featuredCertificateIds = [
 // Certificates Data (sorted by date, newest first)
 const certificates = [
     {
+        title: "Google Cloud Computing Foundations: Infrastructure in Google Cloud",
+        publisher: "Google",
+        issued: "Aug 2026",
+        img: "src/img/sertifikat/HJByIeNEYA6E5fe95ECiv0neJGWUJT6Jmo2O6DcUxcE=.png",
+        url: "https://www.skills.google/public_profiles/fd4c131f-a544-4151-b6d9-e9507426290f/badges/27366199"
+    },
+    {
+        title: "Google Cloud Computing Foundations: Cloud Computing Fundamentals",
+        publisher: "Google",
+        issued: "Aug 2026",
+        img: "src/img/sertifikat/5la+VGoIVcvxqPibJEjSb4HDCcYH0+pWKUO1fHRwj1w=.png",
+        url: "https://www.skills.google/public_profiles/fd4c131f-a544-4151-b6d9-e9507426290f/badges/27176121"
+    },
+    {
         title: "Implement Speech and Language Solutions with Pre-trained APIs",
         publisher: "Google",
         issued: "Aug 2026",
