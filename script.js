@@ -6,9 +6,15 @@ const featuredCertificateIds = [
     "juara2-network",
     "lks-sulsel"
 ];
-
 // Certificates Data (sorted by date, newest first)
 const certificates = [
+    {
+        title: "Google Cloud Computing Foundations: Networking and Security in Google Cloud",
+        publisher: "Google",
+        issued: "Sep 2026",
+        img: "src/img/sertifikat/eufnfFams7RmaH0Ck5IGZIOW_mmrRZ7t4lF66acsw0g=.png",
+        url: "https://www.skills.google/public_profiles/fd4c131f-a544-4151-b6d9-e9507426290f/badges/27803755"
+    },
     {
         title: "Google Cloud Computing Foundations: Infrastructure in Google Cloud",
         publisher: "Google",
